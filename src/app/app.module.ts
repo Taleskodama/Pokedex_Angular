@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 //modules
 import { PagesModule } from './pages/pages.module';
 import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -22,6 +23,7 @@ import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http'
     BrowserModule,
     AppRoutingModule,
     PagesModule,
+    FormsModule
     
   ],
   providers: [provideHttpClient(withInterceptorsFromDi())],

@@ -1,0 +1,107 @@
+.quiz-container {
+    text-align: center;
+    border: 2px solid white; /* Cor amarela como exemplo */
+    border-radius: 10px; /* Borda arredondada */
+    padding: 20px; /* Espaçamento interno */
+    margin: 20px auto; /* Espaçamento externo e centralização */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra leve para destaque */
+    max-width: 500px; /* Largura máxima */
+    
+  
+    h2 {
+      margin-bottom: 20px;
+      color: white;
+      font-weight: 500;
+      font-size: 18px;
+    }
+  
+    .quiz-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px; /* Espaço entre os elementos */
+  
+      img {
+        width: 150px; /* Tamanho da imagem */
+        height: auto;
+        filter: brightness(0) invert(1); /* Silhueta branca */
+      }
+  
+      .quiz-controls {
+        display: flex;
+        flex-direction: column; /* Elementos empilhados verticalmente */
+        gap: 10px; /* Espaço entre input e botão */
+  
+        input {
+          width: 250px;
+          padding: 10px;
+          border: 1px solid #ddd;
+          border-radius: 5px;
+          font-size: 16px;
+        }
+  
+        .skip-button {
+            background-color: #ffc107; /* Amarelo */
+            color: #000;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+          }
+          
+          .skip-button:hover {
+            background-color: #e0a800; /* Amarelo mais escuro no hover */
+          }
+        }
+      }
+    }
+  
+    p {
+      font-size: 18px;
+      margin-top: 20px;
+    }
+  
+    .correct {
+      color: green;
+      font-size: 18px;
+     margin-top: 20px;
+    margin-bottom: 20px;
+    }
+  
+    .incorrect {
+      color: red;
+      font-size: 18px;
+     margin-top: 20px;
+     margin-bottom: 20px;
+    }
+    .verify-button {
+        background-color: green;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      
+      .verify-button:hover {
+        background-color: darkgreen;
+      }
+      .input-box {
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin-bottom: 10px;
+      }
+      .button-row {
+        display: flex;
+        gap: 10px;
+        margin-top: 10px;
+      }
+
+      
+      
+  
+  

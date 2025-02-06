@@ -4,6 +4,9 @@ import { PokeHeaderComponent } from './poke-header/poke-header.component';
 import { PokeSearchComponent } from './poke-search/poke-search.component';
 import { PokeListComponent } from './poke-list/poke-list.component';
 import { RouterModule } from '@angular/router';
+import { PokemonQuizComponent } from './pokemon-quiz/pokemon-quiz.component';
+import { FormsModule } from '@angular/forms';
+
 
 //Components
 
@@ -15,15 +18,20 @@ import { RouterModule } from '@angular/router';
     PokeHeaderComponent,
     PokeSearchComponent,
     PokeListComponent,
+    PokemonQuizComponent,
+    
+
   ],
   exports: [
     PokeHeaderComponent,
     PokeSearchComponent,
     PokeListComponent,
+    PokemonQuizComponent
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    FormsModule
   ]
 })
 export class SharedModule { }

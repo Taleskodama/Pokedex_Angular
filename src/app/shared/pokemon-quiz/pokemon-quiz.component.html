@@ -1,0 +1,26 @@
+<div class="quiz-container">
+  <h2>Adivinhe o Pokémon!</h2>
+  <div class="quiz-row">
+    <img
+      *ngIf="currentPokemon"
+      [src]="currentPokemon.status?.sprites?.front_default || 'path/to/placeholder.png'"
+      [class.silhouette]="!isCorrect"
+      alt="Silhueta do Pokémon"
+    />
+    <div class="quiz-controls">
+      <input
+        type="text"
+        [(ngModel)]="userGuess"
+        placeholder="Digite o nome do Pokémon"
+        class="input-box"
+      />
+      <div class="button-row">
+        <button (click)="checkGuess()" class="btn verify-button">Verificar</button>
+        <button (click)="loadRandomPokemon()" class="btn skip-button">Pular</button>
+      </div>
+    </div>
+  </div>
+  <p [ngClass]="{ correct: isCorrect, incorrect: !isCorrect }">
+    {{ resultMessage }}
+  </p>
+</div>

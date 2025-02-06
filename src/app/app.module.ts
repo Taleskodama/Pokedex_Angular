@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 
 //modules
 import { PagesModule } from './pages/pages.module';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
+
 
 
 
@@ -20,9 +22,9 @@ import { PagesModule } from './pages/pages.module';
     BrowserModule,
     AppRoutingModule,
     PagesModule,
-   
+    
   ],
-  providers: [],
+  providers: [provideHttpClient(withInterceptorsFromDi())],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

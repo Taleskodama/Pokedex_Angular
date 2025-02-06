@@ -1,7 +1,7 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
-  selector: 'app-poke-search',
+  selector: 'poke-search',
   standalone: false,
   templateUrl: './poke-search.component.html',
   styleUrl: './poke-search.component.scss'
@@ -15,6 +15,7 @@ export class PokeSearchComponent implements OnInit{
   ngOnInit(): void {
       
   }
+
   public search(value: string) {
     this.emmitSearch.emit(value);
   }

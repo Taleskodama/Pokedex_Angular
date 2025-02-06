@@ -20,28 +20,23 @@ export class PokeApiService {
 
   get apiListAllPokemons():Observable<any>{
     return this.http.get<any>(this.url).pipe(
-      tap( res => res ),
-      tap( res => {
-        res.results.map( (resPokemons: any) => {
+      tap(res => res),
+      tap(res=> {
+        res.results.map((resPokemons: any) => {
 
-          this.http.get<any>(resPokemons.url).pipe (
-           map(
-            res => {
-              resPokemons.status = res;
-            }
-           )
+          this.apiGetPokemon(resPokemons.url).subscribe(
+            res => resPokemons.status = res
           );
-
         })
       })
     )
   }
 
-  public apiGetPokemon( url: string ):Observable<any>{
-    return this.http.get<any>( url ).pipe(
+  public apiGetPokemon(url: string):Observable<any>{
+    return this.http.get<any>(url).pipe(
       map(
         res => res
-      )
-    )
-  }
+      )
+    )
+  }
 }
